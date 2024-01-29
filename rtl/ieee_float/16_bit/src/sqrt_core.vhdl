@@ -1,5 +1,5 @@
 --------------------------------------------------------------------------------
---                                   FPSqrt
+--                                   FP_Non_Restoring_SQRT
 --                               (FPSqrt_5_10)
 -- VHDL generated for Kintex7 @ 0MHz
 -- This operator is part of the Infinite Virtual Library FloPoCoLib
@@ -20,12 +20,12 @@ library std;
 use std.textio.all;
 library work;
 
-entity FPSqrt is
+entity FP_Non_Restoring_SQRT is
     port (X : in  std_logic_vector(5+10+2 downto 0);
           R : out  std_logic_vector(5+10+2 downto 0)   );
 end entity;
 
-architecture arch of FPSqrt is
+architecture arch of FP_Non_Restoring_SQRT is
 signal fracX :  std_logic_vector(9 downto 0);
 signal eRn0 :  std_logic_vector(4 downto 0);
 signal xsX :  std_logic_vector(2 downto 0);

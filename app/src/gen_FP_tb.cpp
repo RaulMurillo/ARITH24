@@ -4,7 +4,7 @@
 #include <functional> // for std::function<>
 #include <random> // for random_device, uniform_int_distribution
 #include <iostream>
-#include <string.h> 
+#include <string.h>
 
 
 /*
@@ -87,7 +87,7 @@ void rand_test_op(std::function<Real(Real)> op, const uint64_t max_p){
             }
         }
     }
-    else {
+    else if (sizeof(x) == 4){
         for (uint64_t i=0; i<max_p; ++i){
             //x.setbits(uint64_t value);
             x = distr(gen);
