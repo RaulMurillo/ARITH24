@@ -31,6 +31,12 @@
 *.out
 *.app
 
+# Compilation files
+CMakeCache.txt
+CMakeFiles/
+Makefile
+cmake_install.cmake
+
 # Logs
 *.log
 
