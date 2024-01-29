@@ -6,7 +6,7 @@ C_DIR=$PWD
 for d in *_bit*
 do
 	cd ${d}/syn
-	for f in 500MHz # 1GHz 
+	for f in 500MHz 1GHz 
 	do
 		cd $f
 		echo ""

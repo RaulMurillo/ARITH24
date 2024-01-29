@@ -1,5 +1,4 @@
-/* Generation of Testbenches with Universal library */
-#include <universal/number/posit/posit.hpp>
+/* Generation of for floating-point units */
 #include <string> // for strcmp()
 #include <stdlib.h> // for strtoull()
 #include <functional> // for std::function<>
@@ -7,13 +6,6 @@
 #include <iostream>
 #include <string.h> 
 
-
-// Namespaces
-using namespace sw::universal;
-
-// Definitions
-// #define N    8
-#define ES    2
 
 /*
 template<typename Real>
@@ -47,13 +39,12 @@ void test_op(std::function<Real(Real)> op){
     Real x = 0;
     Real r;
 
-    const size_t N = x.nbits;
     unsigned long long max_p;
-    if (N == 64){
+    if (sizeof(x) == 8){
         max_p = 0ULL-1;
     }
     else {
-        max_p = (1ULL<<N)-1;
+        max_p = (1ULL<<(8*sizeof(x)))-1;
     }
     ///////// For sqrt
     max_p = (max_p>>1)+2;
@@ -64,7 +55,7 @@ void test_op(std::function<Real(Real)> op){
     
     for (unsigned long long i=0;i<=max_p; ++i){
         r = op(x);
-        std::cout << x.get() << " " << r.get() <<std::endl;
+        std::cout << std::hex << reinterpret_cast<char*>(&x) << " " << reinterpret_cast<char*>(&r) <<std::endl;
         x++;
     }
 }
@@ -75,31 +66,38 @@ void rand_test_op(std::function<Real(Real)> op, const uint64_t max_p){
     
     Real x;
     Real r;
-    const size_t N = x.nbits;
-    unsigned long long max_k;
-    if (N == 64){
-        max_k = 0ULL-1;
-    }
-    else {
-        max_k = (1ULL<<N)-1;
-    }
 
     // random numbers logic
     std::random_device rd; // obtain a random number from hardware
     std::mt19937 gen(rd()); // seed the generator
-    std::uniform_int_distribution<uint64_t> distr(0, max_k); // define the range
+    std::uniform_real_distribution<Real> distr(0, std::numeric_limits<Real>::max()/1e10); // define the range
     
     // std::cout << "X Y R" << std::endl;
-    
-    for (uint64_t i=0;i<max_p; ++i){
-        //x.setbits(uint64_t value);
-        x.setbits(distr(gen));
-        if (x>0) {
-            r = op(x);
-            std::cout << x.get() << " " << r.get() <<std::endl;
+
+    if (sizeof(x) == 8){
+        for (uint64_t i=0; i<max_p; ++i){
+            //x.setbits(uint64_t value);
+            x = distr(gen);
+            if (x>0) {
+                r = op(x);
+                std::cout << std::hex << reinterpret_cast<long long&>(x) << " " << reinterpret_cast<long long&>(r) <<std::endl;
+            }
+            else {
+                i--;
+            }
         }
-        else {
-            i--;
+    }
+    else {
+        for (uint64_t i=0; i<max_p; ++i){
+            //x.setbits(uint64_t value);
+            x = distr(gen);
+            if (x>0) {
+                r = op(x);
+                std::cout << std::hex << reinterpret_cast<int&>(x) << " " << reinterpret_cast<int&>(r) <<std::endl;
+            }
+            else {
+                i--;
+            }
         }
     }
 }
@@ -173,28 +171,16 @@ int main(int argc, char *argv[]) {
             return 1;
     }
 
-    if (strcmp(argv[1], "8") == 0) {
-        using Real = sw::universal::posit<8,ES>;
+    if (strcmp(argv[1], "float") == 0) {
+        using Real = float;
         check_op<Real>(str_op, rand_t, test_size);
     }
-    else if (strcmp(argv[1], "10") == 0) {
-        using Real = sw::universal::posit<10,ES>;
-        check_op<Real>(str_op, rand_t, test_size);
-    }
-    else if (strcmp(argv[1], "16") == 0) {
-        using Real = sw::universal::posit<16,ES>;
-        check_op<Real>(str_op, rand_t, test_size);
-    }
-    else if (strcmp(argv[1], "32") == 0) {
-        using Real = sw::universal::posit<32,ES>;
-        check_op<Real>(str_op, rand_t, test_size);
-    }
-    else if (strcmp(argv[1], "64") == 0) {
-        using Real = sw::universal::posit<64,ES>;
+    else if (strcmp(argv[1], "double") == 0) {
+        using Real = double;
         check_op<Real>(str_op, rand_t, test_size);
     }
     else {
-        printf("\nInvalid posit bitwidth: %s\nPosit size must be 8, 16, 32 or 64\n",argv[1]);
+        printf("\nInvalid float bitwidth: %s\nFP size must be either \"float\" or \"double\"\n",argv[1]);
         return 1;
     }
 
