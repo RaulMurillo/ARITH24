@@ -1,9 +1,38 @@
 --------------------------------------------------------------------------------
+--                        A simple Counter
+--------------------------------------------------------------------------------
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_arith.all;
+use ieee.std_logic_unsigned.all;
+
+entity counter is
+    port ( clk,rst : in  std_logic;
+             count : out  std_logic_vector (4 downto 0));
+end counter;
+
+architecture Behavioral of counter is
+
+signal temp: std_logic_vector(4 downto 0):=(others => '0');
+
+begin
+    process (clk,rst)
+    begin
+        if (rst = '1')then
+            temp <= (others => '0');
+        elsif(rising_edge(clk))then
+            temp <= temp+1;
+        end if;
+    end process;
+
+    count<=temp;
+end Behavioral;
+
+--------------------------------------------------------------------------------
 --                        TestBench_PositSqrt
 -- VHDL generated for Kintex7 @ 0MHz
 -- This operator is part of the Infinite Virtual Library FloPoCoLib
 -- All rights reserved 
--- Authors: Florent de Dinechin, Cristian Klein, Nicolas Brunie (2007-2010)
 --------------------------------------------------------------------------------
 library ieee;
 use ieee.std_logic_1164.all;
@@ -19,13 +48,29 @@ end entity;
 architecture behavorial of TestBench_PositSqrt is
 constant DataWidth : integer := 16;
     component PositSqrt is
-        port ( X : in  std_logic_vector(DataWidth-1 downto 0);
+        port ( 
+                clk, rst : in std_logic;
+                start : in  std_logic;
+                X : in  std_logic_vector(DataWidth-1 downto 0);
+                done: out  std_logic;
                 R : out  std_logic_vector(DataWidth-1 downto 0)   );
     end component;
+    
+    component counter is
+        port ( 
+                clk, rst : in std_logic;
+                count : out  std_logic_vector(4 downto 0)   );
+    end component;
+
+constant CLK_PERIOD : time := 10 ns;
 signal X :  std_logic_vector(DataWidth-1 downto 0);
 signal R :  std_logic_vector(DataWidth-1 downto 0);
-signal clk :  std_logic;
+signal clk  : std_logic := '0';
 signal rst :  std_logic;
+signal count_rst :  std_logic := '1';
+signal start :  std_logic;
+signal done :  std_logic;
+signal count :  std_logic_vector(4 downto 0);
 
     -- FP compare function (found vs. real)
     function fp_equal(a : std_logic_vector; b : std_logic_vector) return boolean is
@@ -112,80 +157,89 @@ signal rst :  std_logic;
             return a(a'high downto 0) = b(b'high downto 0);
         end if;
     end;
-begin
+begin    
 
     test: PositSqrt
-        port map ( X => X,
-                    R => R);
+        port map ( 
+                clk => clk, 
+                rst => rst,
+                start => start,
+                X => X,
+                done => done,
+                R => R);
+    counter_module: counter
+        port map ( 
+                clk => clk, 
+                rst => count_rst,
+                count => count);
 
-    -- Ticking clock signal
-    process
-    begin
-        clk <= '0';
-        wait for 5 ns;
-        clk <= '1';
-        wait for 5 ns;
-    end process;
+    -- Reset and clock
+    clk <= not clk after CLK_PERIOD/2;
+    -- rst <= '1', '0' after CLK_PERIOD/2;
+
 
     -- Reading the input from a file 
     process
+        procedure async_reset is
+        begin
+            wait until rising_edge(clk);
+            wait for CLK_PERIOD / 4;
+            rst <= '1';
+            -- count_rst <= '1';
+            wait for CLK_PERIOD / 2;
+            rst <= '0';
+            -- count_rst <= '0';
+        end procedure async_reset;
+
         variable inline : line; 
         variable counter : integer := 1;
         variable errorCounter : integer := 0;
         variable possibilityNumber : integer := 0;
         variable localErrorCounter : integer := 0;
         variable tmpChar : character;
-        file inputsFile : text is "./test.input"; 
+        file inputsFile : text is "./input.txt"; 
         variable V_X : bit_vector(DataWidth-1 downto 0);
         variable V_R : bit_vector(DataWidth-1 downto 0);
-    begin
-        -- Send reset
-        rst <= '1';
-        wait for 10 ns;
-        rst <= '0';
-        while not endfile(inputsFile) loop
-            -- positionning inputs
-            readline(inputsFile,inline);
-            read(inline ,V_X);
-            read(inline,tmpChar);
-            X <= to_stdlogicvector(V_X);
-            -- readline(inputsFile,inline);
-            read(inline ,V_R);
-            wait for 10 ns;
-        end loop;
-        wait for 10000 ns; -- wait for simulation to finish
-    end process;
-    -- verifying the corresponding output
-    process
-        variable inline : line; 
-        variable counter : integer := 1;
-        variable errorCounter : integer := 0;
-        -- variable possibilityNumber : integer := 1;
-        variable tmpChar : character;
-        file inputsFile : text is "./test.input"; 
         variable outline : line; 
-        file outputsFile : text open write_mode is "output_test.txt";
-        variable V_X : bit_vector(DataWidth-1 downto 0);
-        variable V_R : bit_vector(DataWidth-1 downto 0);
+        file outputsFile : text open write_mode is "output.txt";
     begin
-            wait for 10 ns;
-        wait for 2 ns; -- no pipeline here
         while not endfile(inputsFile) loop
-            -- positionning inputs
+            -- Reset the circuit.
+            async_reset;
+            -- positioning inputs
             readline(inputsFile,inline);
             read(inline ,V_X);
             read(inline,tmpChar);
             read(inline ,V_R);
+            -- Assign values to circuit inputs.
+            -- count_rst <= '1';
+            wait until rising_edge(clk);
+            X <= to_stdlogicvector(V_X);
+            start <= '1';
+            counter := 0;
+            count_rst <= '1';
+            wait until rising_edge(clk);
+            -- TODO: Remove values from circuit inputs. 
+            -- Need to assert that the circuit is robust to input switching (others => '0')
+            -- X <= (others => '0');
+            count_rst <= '0';   -- start counting cycles
+            start <= '0';
+            wait until (done = '1');
+            wait for 1 ns; -- need to wait a little bit to catch results in the next cycle
+            
+            -- write(outline, counter, left, 4);
+            write(outline, to_integer(unsigned(count)), left, 4+1);
             if not (R= to_stdlogicvector(V_R)) then 
                 errorCounter := errorCounter + 1;
                 -- assert false report("Line " & integer'image(counter) & " of input file, incorrect output for R: " & lf & "  expected value: " & str(to_stdlogicvector(V_R)) & lf & "          result: " & str(R)) ;
-                write(outline, V_X, right, DataWidth);      -- inpùt
+                write(outline, V_X, right, DataWidth);      -- input
                 write(outline, V_R, right, DataWidth+1);    -- expected value
                 write(outline, str(R), right, DataWidth+1); -- obtained result
+                end if;
                 writeline(outputsFile, outline);
-            end if;
-            wait for 10 ns; -- wait for pipeline to flush
+            -- wait for 10 ns; -- wait for pipeline to flush
             -- counter := counter + 2;
+            -- end if;
             counter := counter + 1;
         end loop;
         report (integer'image(errorCounter) & " error(s) encoutered.");
@@ -197,3 +251,4 @@ begin
     end process;
 
 end architecture;
+

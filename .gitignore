@@ -40,3 +40,10 @@
 *.syn
 ARCH/
 ENTI/
+
+# Questasim artifacts
+work/
+*.wlf
+input.txt
+output.txt
+
