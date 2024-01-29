@@ -30,3 +30,13 @@
 *.exe
 *.out
 *.app
+
+# Logs
+*.log
+
+# Synopsys DC objects
+*.mr
+*.svf
+*.syn
+ARCH/
+ENTI/

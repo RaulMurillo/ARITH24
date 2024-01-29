@@ -1,0 +1,58 @@
+ 
+****************************************
+Report : power
+        -hier
+        -analysis_effort low
+Design : PositSqrt
+Version: U-2022.12-SP7
+Date   : Thu Jan 25 20:24:44 2024
+****************************************
+
+
+Library(s) Used:
+
+    tcbn45gsbwp12tml (File: /scratch/synLibs/tcbn45gsbwp12t_200a_FE/TSMCHOME/digital/Back_End/milkyway/tcbn45gsbwp12t_200a/frame_only_VHV_0d5_0/tcbn45gsbwp12t/LM/tcbn45gsbwp12tml.db)
+
+
+Operating Conditions: MLCOM   Library: tcbn45gsbwp12tml
+Wire Load Model Mode: top
+
+Design        Wire Load Model            Library
+------------------------------------------------
+PositSqrt              ZeroWireload      tcbn45gsbwp12tml
+
+
+Global Operating Voltage = 0.99 
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1nW
+
+
+--------------------------------------------------------------------------------
+                                       Switch   Int      Leak     Total
+Hierarchy                              Power    Power    Power    Power    %
+--------------------------------------------------------------------------------
+PositSqrt                              3.32e-02    0.106 1.40e+06    1.539 100.0
+  PositEncoder (PositFastEncoder_16_2_F0_uid36)
+                                       7.11e-04 1.41e-03 2.24e+05    0.226  14.7
+    RegimeGenerator (RightShifterSticky15_by_max_15_F0_uid38)
+                                       5.19e-04 5.19e-04 8.58e+04 8.68e-02   5.6
+  sqrt_module (Non_Restoring_SQRT_n14) 6.87e-03 3.08e-02 8.57e+05    0.895  58.2
+    DP (DataPath_n14)                  6.64e-03 3.03e-02 8.51e+05    0.888  57.7
+      add_0_root_sub_0_root_add_236_2 (DataPath_n14_DW01_add_0_DW01_add_1)
+                                       1.30e-04 1.61e-03 1.21e+05    0.122   8.0
+      sub_1_root_sub_0_root_add_236_2 (DataPath_n14_DW01_sub_0)
+                                       2.74e-04 1.07e-03 1.23e+05    0.125   8.1
+      sub_0_root_sub_0_root_sub_236 (DataPath_n14_DW01_sub_1)
+                                       1.34e-04 1.38e-03 1.22e+05    0.124   8.1
+      sub_1_root_sub_0_root_sub_236 (DataPath_n14_DW01_sub_2)
+                                       2.22e-04 1.07e-03 1.23e+05    0.125   8.1
+    UC (ControlUnit)                   2.25e-04 5.37e-04 5.80e+03 6.56e-03   0.4
+  X_decoder (PositFastDecoder_16_2_F0_uid4)
+                                       1.54e-02 3.91e-02 1.63e+05    0.217  14.1
+    RegimeCounter (Normalizer_ZO_14_14_14_F0_uid6)
+                                       1.37e-02 3.16e-02 1.31e+05    0.177  11.5
+1

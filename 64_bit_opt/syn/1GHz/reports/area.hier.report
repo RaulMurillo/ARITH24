@@ -1,0 +1,61 @@
+report_area -hierarchy 
+ 
+****************************************
+Report : area
+Design : PositSqrt
+Version: U-2022.12-SP7
+Date   : Mon Jan 29 09:26:58 2024
+****************************************
+
+Library(s) Used:
+
+    tcbn45gsbwp12tml (File: /scratch/synLibs/tcbn45gsbwp12t_200a_FE/TSMCHOME/digital/Back_End/milkyway/tcbn45gsbwp12t_200a/frame_only_VHV_0d5_0/tcbn45gsbwp12t/LM/tcbn45gsbwp12tml.db)
+
+Number of ports:                         1910
+Number of nets:                          7010
+Number of cells:                         5263
+Number of combinational cells:           4859
+Number of sequential cells:               392
+Number of macros/black boxes:               0
+Number of buf/inv:                       1520
+Number of references:                      16
+
+Combinational area:               6288.777667
+Buf/Inv area:                     1102.617634
+Noncombinational area:            2120.798315
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (Wire load has zero net area)
+
+Total cell area:                  8409.575982
+Total area:                 undefined
+
+Hierarchical area distribution
+------------------------------
+
+                                  Global cell area          Local cell area
+                                  ------------------  ---------------------------- 
+Hierarchical cell                 Absolute   Percent  Combi-     Noncombi-  Black-
+                                  Total      Total    national   national   boxes   Design
+--------------------------------  ---------  -------  ---------  ---------  ------  ------------------------------------------
+PositSqrt                         8409.5760    100.0   184.8672   735.9408  0.0000  PositSqrt
+PositEncoder                      1197.8736     14.2   138.2976     0.0000  0.0000  PositFastEncoder_64_2_F0_uid132
+PositEncoder/RegimeGenerator       809.5584      9.6   809.5584     0.0000  0.0000  RightShifterSticky63_by_max_63_F0_uid134
+PositEncoder/add_302               250.0176      3.0   250.0176     0.0000  0.0000  PositFastEncoder_64_2_F0_uid132_DW01_add_0
+X_decoder                          874.7088     10.4    57.8592     0.0000  0.0000  PositFastDecoder_64_2_F0_uid4
+X_decoder/RegimeCounter            816.8496      9.7   816.8496     0.0000  0.0000  Normalizer_ZO_62_62_62_F0_uid6
+sqrt_module                       5416.1856     64.4     0.7056     0.0000  0.0000  Non_Restoring_SQRT_n62_iter_len6
+sqrt_module/DP                    5405.3664     64.3  1330.5264  1379.4479  0.0000  DataPath_n62_iter_len6
+sqrt_module/DP/add_0_root_sub_0_root_add_239_2
+                                   645.3888      7.7   645.3888     0.0000  0.0000  DataPath_n62_iter_len6_DW01_add_J4_0
+sqrt_module/DP/sub_0_root_sub_0_root_sub_239
+                                   700.6608      8.3   700.6608     0.0000  0.0000  DataPath_n62_iter_len6_DW01_sub_J3_0
+sqrt_module/DP/sub_1_root_sub_0_root_add_239_2
+                                   673.8480      8.0   673.8480     0.0000  0.0000  DataPath_n62_iter_len6_DW01_sub_3
+sqrt_module/DP/sub_1_root_sub_0_root_sub_239
+                                   675.4944      8.0   675.4944     0.0000  0.0000  DataPath_n62_iter_len6_DW01_sub_J2_0
+sqrt_module/UC                      10.1136      0.1     4.7040     5.4096  0.0000  ControlUnit
+--------------------------------  ---------  -------  ---------  ---------  ------  ------------------------------------------
+Total                                                 6288.7777  2120.7983  0.0000
+
+
+
