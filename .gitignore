@@ -51,5 +51,8 @@ ENTI/
 work/
 *.wlf
 input.txt
-output.txt
+output*.txt
 transcript
+
+# Python virtual environment
+venv/

@@ -211,6 +211,7 @@ begin
             hread(inline ,V_X);
             read(inline,tmpChar);
             hread(inline ,V_R);
+            -- wait for CLK_PERIOD;
             -- Assign values to circuit inputs.
             -- count_rst <= '1';
             wait until rising_edge(clk);
@@ -225,6 +226,7 @@ begin
             count_rst <= '0';   -- start counting cycles
             start <= '0';
             wait until (done = '1');
+            -- wait for CLK_PERIOD;
             wait for 1 ns; -- need to wait a little bit to catch results in the next cycle
             
             -- write(outline, counter, left, 4);

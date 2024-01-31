@@ -72,20 +72,6 @@ signal start :  std_logic;
 signal done :  std_logic;
 signal count :  std_logic_vector(4 downto 0);
 
-    -- FP compare function (found vs. real)
-    function fp_equal(a : std_logic_vector; b : std_logic_vector) return boolean is
-    begin
-        if b(b'high downto b'high-1) = "01" then
-            return a = b;
-        elsif b(b'high downto b'high-1) = "11" then
-            return (a(a'high downto a'high-1)=b(b'high downto b'high-1));
-        else
-            return a(a'high downto a'high-2) = b(b'high downto b'high-2);
-        end if;
-    end;
-
-
-
     -- converts std_logic into a character
     function chr(sl: std_logic) return character is
         variable c: character;
@@ -138,25 +124,6 @@ signal count :  std_logic_vector(4 downto 0);
 
 
 
-
-    -- test isZero
-    function iszero(a : std_logic_vector) return boolean is
-    begin
-        return  a = (a'high downto 0 => '0');
-    end;
-
-
-    -- FP IEEE compare function (found vs. real)
-    function fp_equal_ieee(a : std_logic_vector; b : std_logic_vector; we : integer; wf : integer) return boolean is
-    begin
-        if a(wf+we downto wf) = b(wf+we downto wf) and b(we+wf-1 downto wf) = (we downto 1 => '1') then
-            if iszero(b(wf-1 downto 0)) then return  iszero(a(wf-1 downto 0));
-            else return not iszero(a(wf - 1 downto 0));
-            end if;
-        else
-            return a(a'high downto 0) = b(b'high downto 0);
-        end if;
-    end;
 begin    
 
     test: PositSqrt
@@ -225,7 +192,7 @@ begin
             count_rst <= '0';   -- start counting cycles
             start <= '0';
             wait until (done = '1');
-            wait for 1 ns; -- need to wait a little bit to catch results in the next cycle
+            wait for CLK_PERIOD / 2; -- need to wait a little bit to catch results in the next cycle
             
             -- write(outline, counter, left, 4);
             write(outline, to_integer(unsigned(count)), left, 4+1);
@@ -237,7 +204,7 @@ begin
                 write(outline, str(R), right, DataWidth+1); -- obtained result
                 end if;
                 writeline(outputsFile, outline);
-            -- wait for 10 ns; -- wait for pipeline to flush
+            -- wait for CLK_PERIOD / 2; -- wait for pipeline to flush
             -- counter := counter + 2;
             -- end if;
             counter := counter + 1;
