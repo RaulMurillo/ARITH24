@@ -46,6 +46,7 @@ cmake_install.cmake
 *.syn
 ARCH/
 ENTI/
+db/
 
 # Questasim artifacts
 work/

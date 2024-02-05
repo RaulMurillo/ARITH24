@@ -1,0 +1,225 @@
+report_cell 
+ 
+****************************************
+Report : cell
+Design : PositSqrt
+Version: U-2022.12-SP7
+Date   : Mon Feb  5 19:17:44 2024
+****************************************
+
+Attributes:
+    b - black box (unknown)
+    h - hierarchical
+    n - noncombinational
+    p - parameterized
+    r - removable
+    u - contains unmapped logic
+
+Cell                      Reference       Library             Area  Attributes
+--------------------------------------------------------------------------------
+PositEncoder              PositFastEncoder_16_2_F0_uid36  90.972001 h
+U30                       TIELBWP30P140   tcbn28hpcplusbwp30p140tt1v25c
+                                                          0.252000  
+U31                       INVD1BWP30P140  tcbn28hpcplusbwp30p140tt1v25c
+                                                          0.252000  
+U32                       OAI22D1BWP30P140
+                                          tcbn28hpcplusbwp30p140tt1v25c
+                                                          0.630000  
+U33                       OAI22D1BWP30P140
+                                          tcbn28hpcplusbwp30p140tt1v25c
+                                                          0.630000  
+U34                       OAI22D1BWP30P140
+                                          tcbn28hpcplusbwp30p140tt1v25c
+                                                          0.630000  
+U35                       OAI22D1BWP30P140
+                                          tcbn28hpcplusbwp30p140tt1v25c
+                                                          0.630000  
+U36                       OAI22D1BWP30P140
+                                          tcbn28hpcplusbwp30p140tt1v25c
+                                                          0.630000  
+U37                       OAI22D1BWP30P140
+                                          tcbn28hpcplusbwp30p140tt1v25c
+                                                          0.630000  
+U38                       OAI22D1BWP30P140
+                                          tcbn28hpcplusbwp30p140tt1v25c
+                                                          0.630000  
+U39                       OAI22D1BWP30P140
+                                          tcbn28hpcplusbwp30p140tt1v25c
+                                                          0.630000  
+U40                       OAI22D1BWP30P140
+                                          tcbn28hpcplusbwp30p140tt1v25c
+                                                          0.630000  
+U41                       OAI22D1BWP30P140
+                                          tcbn28hpcplusbwp30p140tt1v25c
+                                                          0.630000  
+U42                       INVD1BWP30P140  tcbn28hpcplusbwp30p140tt1v25c
+                                                          0.252000  
+U43                       INVD1BWP30P140  tcbn28hpcplusbwp30p140tt1v25c
+                                                          0.252000  
+U44                       INVD1BWP30P140  tcbn28hpcplusbwp30p140tt1v25c
+                                                          0.252000  
+U45                       INVD1BWP30P140  tcbn28hpcplusbwp30p140tt1v25c
+                                                          0.252000  
+U46                       INVD1BWP30P140  tcbn28hpcplusbwp30p140tt1v25c
+                                                          0.252000  
+U47                       INVD1BWP30P140  tcbn28hpcplusbwp30p140tt1v25c
+                                                          0.252000  
+U48                       INVD1BWP30P140  tcbn28hpcplusbwp30p140tt1v25c
+                                                          0.252000  
+U49                       INVD1BWP30P140  tcbn28hpcplusbwp30p140tt1v25c
+                                                          0.252000  
+U50                       INVD1BWP30P140  tcbn28hpcplusbwp30p140tt1v25c
+                                                          0.252000  
+U51                       INVD1BWP30P140  tcbn28hpcplusbwp30p140tt1v25c
+                                                          0.252000  
+U52                       INVD1BWP30P140  tcbn28hpcplusbwp30p140tt1v25c
+                                                          0.252000  
+U53                       ND2D1BWP30P140  tcbn28hpcplusbwp30p140tt1v25c
+                                                          0.378000  
+U54                       NR2D1BWP30P140  tcbn28hpcplusbwp30p140tt1v25c
+                                                          0.378000  
+U55                       CKBD1BWP30P140  tcbn28hpcplusbwp30p140tt1v25c
+                                                          0.378000  
+U56                       INVD1BWP30P140  tcbn28hpcplusbwp30p140tt1v25c
+                                                          0.252000  
+U57                       INR2D1BWP30P140 tcbn28hpcplusbwp30p140tt1v25c
+                                                          0.504000  
+XY_finalSgn_reg_reg       DFCNQD1BWP30P140
+                                          tcbn28hpcplusbwp30p140tt1v25c
+                                                          2.268000  n
+XY_nzn_reg_reg            DFSNQD2BWP30P140
+                                          tcbn28hpcplusbwp30p140tt1v25c
+                                                          2.268000  n
+XY_sf_reg_reg[0]          DFCNQD1BWP30P140
+                                          tcbn28hpcplusbwp30p140tt1v25c
+                                                          2.268000  n
+XY_sf_reg_reg[1]          DFCNQD1BWP30P140
+                                          tcbn28hpcplusbwp30p140tt1v25c
+                                                          2.268000  n
+XY_sf_reg_reg[2]          DFCNQD1BWP30P140
+                                          tcbn28hpcplusbwp30p140tt1v25c
+                                                          2.268000  n
+XY_sf_reg_reg[3]          DFCNQD1BWP30P140
+                                          tcbn28hpcplusbwp30p140tt1v25c
+                                                          2.268000  n
+XY_sf_reg_reg[4]          DFCNQD1BWP30P140
+                                          tcbn28hpcplusbwp30p140tt1v25c
+                                                          2.268000  n
+XY_sf_reg_reg[5]          DFCNQD1BWP30P140
+                                          tcbn28hpcplusbwp30p140tt1v25c
+                                                          2.268000  n
+XY_sf_reg_reg[6]          DFCNQD1BWP30P140
+                                          tcbn28hpcplusbwp30p140tt1v25c
+                                                          2.268000  n
+XY_sf_reg_reg[7]          DFCNQD1BWP30P140
+                                          tcbn28hpcplusbwp30p140tt1v25c
+                                                          2.268000  n
+X_decoder                 PositFastDecoder_16_2_F0_uid4   67.158001 h
+X_sf_reg_reg[1]           DFCNQD1BWP30P140
+                                          tcbn28hpcplusbwp30p140tt1v25c
+                                                          2.268000  n
+X_sf_reg_reg[2]           DFCNQD1BWP30P140
+                                          tcbn28hpcplusbwp30p140tt1v25c
+                                                          2.268000  n
+X_sf_reg_reg[3]           DFCNQD1BWP30P140
+                                          tcbn28hpcplusbwp30p140tt1v25c
+                                                          2.268000  n
+X_sf_reg_reg[4]           DFCNQD1BWP30P140
+                                          tcbn28hpcplusbwp30p140tt1v25c
+                                                          2.268000  n
+X_sf_reg_reg[5]           DFCNQD1BWP30P140
+                                          tcbn28hpcplusbwp30p140tt1v25c
+                                                          2.268000  n
+X_sf_reg_reg[6]           DFCNQD1BWP30P140
+                                          tcbn28hpcplusbwp30p140tt1v25c
+                                                          2.268000  n
+ready_reg_reg             DFCNQD1BWP30P140
+                                          tcbn28hpcplusbwp30p140tt1v25c
+                                                          2.268000  n
+sqrt_f_reg_reg[0]         DFCNQD1BWP30P140
+                                          tcbn28hpcplusbwp30p140tt1v25c
+                                                          2.268000  n
+sqrt_f_reg_reg[1]         DFCNQD1BWP30P140
+                                          tcbn28hpcplusbwp30p140tt1v25c
+                                                          2.268000  n
+sqrt_f_reg_reg[2]         DFCNQD1BWP30P140
+                                          tcbn28hpcplusbwp30p140tt1v25c
+                                                          2.268000  n
+sqrt_f_reg_reg[3]         DFCNQD1BWP30P140
+                                          tcbn28hpcplusbwp30p140tt1v25c
+                                                          2.268000  n
+sqrt_f_reg_reg[4]         DFCNQD1BWP30P140
+                                          tcbn28hpcplusbwp30p140tt1v25c
+                                                          2.268000  n
+sqrt_f_reg_reg[5]         DFCNQD1BWP30P140
+                                          tcbn28hpcplusbwp30p140tt1v25c
+                                                          2.268000  n
+sqrt_f_reg_reg[6]         DFCNQD1BWP30P140
+                                          tcbn28hpcplusbwp30p140tt1v25c
+                                                          2.268000  n
+sqrt_f_reg_reg[7]         DFCNQD1BWP30P140
+                                          tcbn28hpcplusbwp30p140tt1v25c
+                                                          2.268000  n
+sqrt_f_reg_reg[8]         DFCNQD1BWP30P140
+                                          tcbn28hpcplusbwp30p140tt1v25c
+                                                          2.268000  n
+sqrt_f_reg_reg[9]         DFCNQD1BWP30P140
+                                          tcbn28hpcplusbwp30p140tt1v25c
+                                                          2.268000  n
+sqrt_f_reg_reg[10]        DFCNQD1BWP30P140
+                                          tcbn28hpcplusbwp30p140tt1v25c
+                                                          2.268000  n
+sqrt_f_reg_reg[11]        DFCNQD1BWP30P140
+                                          tcbn28hpcplusbwp30p140tt1v25c
+                                                          2.268000  n
+sqrt_f_reg_reg[12]        DFCNQD1BWP30P140
+                                          tcbn28hpcplusbwp30p140tt1v25c
+                                                          2.268000  n
+sqrt_in_reg_reg[0]        DFCNQD1BWP30P140
+                                          tcbn28hpcplusbwp30p140tt1v25c
+                                                          2.268000  n
+sqrt_in_reg_reg[1]        DFCNQD1BWP30P140
+                                          tcbn28hpcplusbwp30p140tt1v25c
+                                                          2.268000  n
+sqrt_in_reg_reg[2]        DFCNQD1BWP30P140
+                                          tcbn28hpcplusbwp30p140tt1v25c
+                                                          2.268000  n
+sqrt_in_reg_reg[3]        DFCNQD1BWP30P140
+                                          tcbn28hpcplusbwp30p140tt1v25c
+                                                          2.268000  n
+sqrt_in_reg_reg[4]        DFCNQD1BWP30P140
+                                          tcbn28hpcplusbwp30p140tt1v25c
+                                                          2.268000  n
+sqrt_in_reg_reg[5]        DFCNQD1BWP30P140
+                                          tcbn28hpcplusbwp30p140tt1v25c
+                                                          2.268000  n
+sqrt_in_reg_reg[6]        DFCNQD1BWP30P140
+                                          tcbn28hpcplusbwp30p140tt1v25c
+                                                          2.268000  n
+sqrt_in_reg_reg[7]        DFCNQD1BWP30P140
+                                          tcbn28hpcplusbwp30p140tt1v25c
+                                                          2.268000  n
+sqrt_in_reg_reg[8]        DFCNQD1BWP30P140
+                                          tcbn28hpcplusbwp30p140tt1v25c
+                                                          2.268000  n
+sqrt_in_reg_reg[9]        DFCNQD1BWP30P140
+                                          tcbn28hpcplusbwp30p140tt1v25c
+                                                          2.268000  n
+sqrt_in_reg_reg[10]       DFCNQD1BWP30P140
+                                          tcbn28hpcplusbwp30p140tt1v25c
+                                                          2.268000  n
+sqrt_in_reg_reg[11]       DFCNQD1BWP30P140
+                                          tcbn28hpcplusbwp30p140tt1v25c
+                                                          2.268000  n
+sqrt_in_reg_reg[12]       DFCNQD1BWP30P140
+                                          tcbn28hpcplusbwp30p140tt1v25c
+                                                          2.268000  n
+sqrt_module               Non_Restoring_SQRT_n14          355.823991
+                                                                    h, n, p
+start_reg_reg             DFCNQD1BWP30P140
+                                          tcbn28hpcplusbwp30p140tt1v25c
+                                                          2.268000  n
+--------------------------------------------------------------------------------
+Total 75 cells                                            625.211988
+
+

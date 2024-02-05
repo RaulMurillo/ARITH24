@@ -1,0 +1,59 @@
+ 
+****************************************
+Report : power
+        -hier
+        -analysis_effort low
+Design : PositSqrt
+Version: U-2022.12-SP7
+Date   : Mon Feb  5 19:18:10 2024
+****************************************
+
+
+Library(s) Used:
+
+    tcbn28hpcplusbwp30p140tt1v25c (File: /scratch/synLibs/tcbn28hpcplusbwp30p140_180a_FE/TSMCHOME/digital/Front_End/timing_power_noise/NLDM/tcbn28hpcplusbwp30p140_180a/tcbn28hpcplusbwp30p140tt1v25c.db)
+
+
+Operating Conditions: tt1v25c   Library: tcbn28hpcplusbwp30p140tt1v25c
+Wire Load Model Mode: top
+
+Design        Wire Load Model            Library
+------------------------------------------------
+PositSqrt              ZeroWireload      tcbn28hpcplusbwp30p140tt1v25c
+
+
+Global Operating Voltage = 1    
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1nW
+
+
+--------------------------------------------------------------------------------
+                                       Switch   Int      Leak     Total
+Hierarchy                              Power    Power    Power    Power    %
+--------------------------------------------------------------------------------
+PositSqrt                              2.25e-02 5.73e-02 3.73e+03 8.36e-02 100.0
+  PositEncoder (PositFastEncoder_16_2_F0_uid36)
+                                       4.49e-04 5.87e-04  661.769 1.70e-03   2.0
+    RegimeGenerator (RightShifterSticky15_by_max_15_F0_uid38)
+                                       3.28e-04 2.44e-04  258.352 8.31e-04   1.0
+  sqrt_module (Non_Restoring_SQRT_n14_iter_len4)
+                                       4.91e-03 1.63e-02 1.93e+03 2.32e-02  27.7
+    DP (DataPath_n14_iter_len4)        4.81e-03 1.60e-02 1.91e+03 2.27e-02  27.2
+      add_0_root_sub_0_root_add_239_2 (DataPath_n14_iter_len4_DW01_add_0_DW01_add_1)
+                                       8.52e-05 2.65e-04  155.359 5.06e-04   0.6
+      sub_1_root_sub_0_root_add_239_2 (DataPath_n14_iter_len4_DW01_sub_0_DW01_sub_1)
+                                       2.05e-04 4.08e-04  180.861 7.94e-04   1.0
+      sub_0_root_sub_0_root_sub_239 (DataPath_n14_iter_len4_DW01_sub_1_DW01_sub_2)
+                                       8.42e-05 2.66e-04  173.424 5.24e-04   0.6
+      sub_1_root_sub_0_root_sub_239 (DataPath_n14_iter_len4_DW01_sub_2_DW01_sub_3)
+                                       2.10e-04 4.08e-04  180.861 7.99e-04   1.0
+    UC (ControlUnit)                   7.48e-05 3.23e-04   18.680 4.17e-04   0.5
+  X_decoder (PositFastDecoder_16_2_F0_uid4)
+                                       9.91e-03 1.70e-02  456.866 2.74e-02  32.8
+    RegimeCounter (Normalizer_ZO_14_14_14_F0_uid6)
+                                       8.97e-03 1.44e-02  378.031 2.37e-02  28.4
+1

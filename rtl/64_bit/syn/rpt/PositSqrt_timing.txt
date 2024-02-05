@@ -1,0 +1,179 @@
+report_timing 
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : PositSqrt
+Version: U-2022.12-SP7
+Date   : Mon Feb  5 19:19:25 2024
+****************************************
+
+Operating Conditions: tt1v25c   Library: tcbn28hpcplusbwp30p140tt1v25c
+Wire Load Model Mode: top
+
+  Startpoint: sqrt_module/DP/r_reg_reg[9]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: sqrt_f_reg_reg[1]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  PositSqrt          ZeroWireload          tcbn28hpcplusbwp30p140tt1v25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  sqrt_module/DP/r_reg_reg[9]/CP (DFCNQD1BWP30P140)       0.00       0.00 r
+  sqrt_module/DP/r_reg_reg[9]/Q (DFCNQD1BWP30P140)        0.04       0.04 f
+  sqrt_module/DP/sub_1_root_sub_0_root_add_236_2/A[10] (DataPath_n62_DW01_sub_J2_0)
+                                                          0.00       0.04 f
+  sqrt_module/DP/sub_1_root_sub_0_root_add_236_2/U291/ZN (INVD1BWP30P140)
+                                                          0.01       0.05 r
+  sqrt_module/DP/sub_1_root_sub_0_root_add_236_2/U290/ZN (ND2D1BWP30P140)
+                                                          0.01       0.06 f
+  sqrt_module/DP/sub_1_root_sub_0_root_add_236_2/U90/ZN (ND2D1BWP30P140)
+                                                          0.01       0.07 r
+  sqrt_module/DP/sub_1_root_sub_0_root_add_236_2/U89/ZN (AOI21D1BWP30P140)
+                                                          0.01       0.08 f
+  sqrt_module/DP/sub_1_root_sub_0_root_add_236_2/U87/ZN (OAI21D1BWP30P140)
+                                                          0.01       0.09 r
+  sqrt_module/DP/sub_1_root_sub_0_root_add_236_2/U573/ZN (INVD1BWP30P140)
+                                                          0.01       0.09 f
+  sqrt_module/DP/sub_1_root_sub_0_root_add_236_2/U79/ZN (NR2D1BWP30P140)
+                                                          0.01       0.10 r
+  sqrt_module/DP/sub_1_root_sub_0_root_add_236_2/U78/ZN (ND2D1BWP30P140)
+                                                          0.01       0.11 f
+  sqrt_module/DP/sub_1_root_sub_0_root_add_236_2/U42/ZN (AOI21D1BWP30P140)
+                                                          0.01       0.12 r
+  sqrt_module/DP/sub_1_root_sub_0_root_add_236_2/U40/ZN (INR2D1BWP30P140)
+                                                          0.01       0.12 f
+  sqrt_module/DP/sub_1_root_sub_0_root_add_236_2/U76/ZN (INR2D1BWP30P140)
+                                                          0.01       0.13 r
+  sqrt_module/DP/sub_1_root_sub_0_root_add_236_2/U74/ZN (OAI21D1BWP30P140)
+                                                          0.01       0.15 f
+  sqrt_module/DP/sub_1_root_sub_0_root_add_236_2/U55/ZN (INR3D0BWP30P140)
+                                                          0.02       0.16 f
+  sqrt_module/DP/sub_1_root_sub_0_root_add_236_2/U54/ZN (INVD1BWP30P140)
+                                                          0.01       0.17 r
+  sqrt_module/DP/sub_1_root_sub_0_root_add_236_2/U11/ZN (OAI21D1BWP30P140)
+                                                          0.01       0.18 f
+  sqrt_module/DP/sub_1_root_sub_0_root_add_236_2/U53/ZN (AOI21D1BWP30P140)
+                                                          0.01       0.19 r
+  sqrt_module/DP/sub_1_root_sub_0_root_add_236_2/U52/ZN (OAI21D1BWP30P140)
+                                                          0.01       0.20 f
+  sqrt_module/DP/sub_1_root_sub_0_root_add_236_2/U51/ZN (AOI21D1BWP30P140)
+                                                          0.01       0.21 r
+  sqrt_module/DP/sub_1_root_sub_0_root_add_236_2/U50/ZN (OAI21D1BWP30P140)
+                                                          0.01       0.22 f
+  sqrt_module/DP/sub_1_root_sub_0_root_add_236_2/U61/ZN (ND2D1BWP30P140)
+                                                          0.01       0.23 r
+  sqrt_module/DP/sub_1_root_sub_0_root_add_236_2/U503/ZN (INVD1BWP30P140)
+                                                          0.01       0.24 f
+  sqrt_module/DP/sub_1_root_sub_0_root_add_236_2/U71/ZN (AOI211D1BWP30P140)
+                                                          0.01       0.25 r
+  sqrt_module/DP/sub_1_root_sub_0_root_add_236_2/U70/ZN (INR2D1BWP30P140)
+                                                          0.01       0.25 f
+  sqrt_module/DP/sub_1_root_sub_0_root_add_236_2/U60/ZN (INR2D1BWP30P140)
+                                                          0.01       0.26 r
+  sqrt_module/DP/sub_1_root_sub_0_root_add_236_2/U59/ZN (OAI21D1BWP30P140)
+                                                          0.01       0.27 f
+  sqrt_module/DP/sub_1_root_sub_0_root_add_236_2/U58/ZN (AOI21D1BWP30P140)
+                                                          0.01       0.28 r
+  sqrt_module/DP/sub_1_root_sub_0_root_add_236_2/U57/ZN (OAI21D1BWP30P140)
+                                                          0.01       0.30 f
+  sqrt_module/DP/sub_1_root_sub_0_root_add_236_2/U499/ZN (INVD1BWP30P140)
+                                                          0.01       0.30 r
+  sqrt_module/DP/sub_1_root_sub_0_root_add_236_2/U44/ZN (OAI21D1BWP30P140)
+                                                          0.01       0.32 f
+  sqrt_module/DP/sub_1_root_sub_0_root_add_236_2/U45/ZN (IOA21D1BWP30P140)
+                                                          0.02       0.34 f
+  sqrt_module/DP/sub_1_root_sub_0_root_add_236_2/U46/ZN (IOA21D1BWP30P140)
+                                                          0.02       0.36 f
+  sqrt_module/DP/sub_1_root_sub_0_root_add_236_2/U494/ZN (INVD1BWP30P140)
+                                                          0.01       0.37 r
+  sqrt_module/DP/sub_1_root_sub_0_root_add_236_2/U47/ZN (OAI21D1BWP30P140)
+                                                          0.01       0.38 f
+  sqrt_module/DP/sub_1_root_sub_0_root_add_236_2/U491/ZN (INVD1BWP30P140)
+                                                          0.01       0.39 r
+  sqrt_module/DP/sub_1_root_sub_0_root_add_236_2/U48/ZN (OAI21D1BWP30P140)
+                                                          0.01       0.40 f
+  sqrt_module/DP/sub_1_root_sub_0_root_add_236_2/U488/ZN (INVD1BWP30P140)
+                                                          0.01       0.41 r
+  sqrt_module/DP/sub_1_root_sub_0_root_add_236_2/U49/ZN (OAI21D1BWP30P140)
+                                                          0.01       0.42 f
+  sqrt_module/DP/sub_1_root_sub_0_root_add_236_2/U485/ZN (INVD1BWP30P140)
+                                                          0.01       0.43 r
+  sqrt_module/DP/sub_1_root_sub_0_root_add_236_2/U64/ZN (OAI21D1BWP30P140)
+                                                          0.01       0.44 f
+  sqrt_module/DP/sub_1_root_sub_0_root_add_236_2/U482/ZN (INVD1BWP30P140)
+                                                          0.01       0.45 r
+  sqrt_module/DP/sub_1_root_sub_0_root_add_236_2/U65/ZN (OAI21D1BWP30P140)
+                                                          0.01       0.47 f
+  sqrt_module/DP/sub_1_root_sub_0_root_add_236_2/U479/ZN (INVD1BWP30P140)
+                                                          0.01       0.47 r
+  sqrt_module/DP/sub_1_root_sub_0_root_add_236_2/U66/ZN (OAI21D1BWP30P140)
+                                                          0.01       0.49 f
+  sqrt_module/DP/sub_1_root_sub_0_root_add_236_2/U476/ZN (INVD1BWP30P140)
+                                                          0.01       0.49 r
+  sqrt_module/DP/sub_1_root_sub_0_root_add_236_2/U67/ZN (OAI21D1BWP30P140)
+                                                          0.01       0.51 f
+  sqrt_module/DP/sub_1_root_sub_0_root_add_236_2/U473/ZN (INVD1BWP30P140)
+                                                          0.01       0.52 r
+  sqrt_module/DP/sub_1_root_sub_0_root_add_236_2/U68/ZN (OAI21D1BWP30P140)
+                                                          0.01       0.53 f
+  sqrt_module/DP/sub_1_root_sub_0_root_add_236_2/U470/ZN (INVD1BWP30P140)
+                                                          0.01       0.54 r
+  sqrt_module/DP/sub_1_root_sub_0_root_add_236_2/U69/ZN (OAI21D1BWP30P140)
+                                                          0.01       0.55 f
+  sqrt_module/DP/sub_1_root_sub_0_root_add_236_2/U469/ZN (INVD1BWP30P140)
+                                                          0.01       0.56 r
+  sqrt_module/DP/sub_1_root_sub_0_root_add_236_2/U272/ZN (OAI21D1BWP30P140)
+                                                          0.01       0.57 f
+  sqrt_module/DP/sub_1_root_sub_0_root_add_236_2/U269/ZN (XNR2UD1BWP30P140)
+                                                          0.02       0.59 f
+  sqrt_module/DP/sub_1_root_sub_0_root_add_236_2/DIFF[61] (DataPath_n62_DW01_sub_J2_0)
+                                                          0.00       0.59 f
+  sqrt_module/DP/add_0_root_sub_0_root_add_236_2/B[61] (DataPath_n62_DW01_add_J3_0)
+                                                          0.00       0.59 f
+  sqrt_module/DP/add_0_root_sub_0_root_add_236_2/U402/Z (OA21D1BWP30P140)
+                                                          0.02       0.61 f
+  sqrt_module/DP/add_0_root_sub_0_root_add_236_2/U401/Z (AO21D1BWP30P140)
+                                                          0.02       0.62 f
+  sqrt_module/DP/add_0_root_sub_0_root_add_236_2/U417/ZN (AOI21D1BWP30P140)
+                                                          0.01       0.64 r
+  sqrt_module/DP/add_0_root_sub_0_root_add_236_2/U416/ZN (XNR2UD1BWP30P140)
+                                                          0.01       0.65 f
+  sqrt_module/DP/add_0_root_sub_0_root_add_236_2/SUM[62] (DataPath_n62_DW01_add_J3_0)
+                                                          0.00       0.65 f
+  sqrt_module/DP/U853/ZN (INVD1BWP30P140)                 0.01       0.65 r
+  sqrt_module/DP/U857/ZN (ND4D1BWP30P140)                 0.01       0.67 f
+  sqrt_module/DP/U858/ZN (NR4D0BWP30P140)                 0.02       0.69 r
+  sqrt_module/DP/U917/ZN (ND4D1BWP30P140)                 0.01       0.70 f
+  sqrt_module/DP/U124/Z (CKMUX2D0BWP30P140)               0.02       0.72 f
+  sqrt_module/DP/U918/ZN (ND2OPTIBD1BWP30P140)            0.02       0.73 r
+  sqrt_module/DP/U11/ZN (INVD1BWP30P140)                  0.03       0.77 f
+  sqrt_module/DP/U55/Z (CKMUX2D0BWP30P140)                0.03       0.80 r
+  sqrt_module/DP/root[1] (DataPath_n62)                   0.00       0.80 r
+  sqrt_module/R[1] (Non_Restoring_SQRT_n62)               0.00       0.80 r
+  sqrt_f_reg_reg[1]/D (DFCNQD1BWP30P140)                  0.00       0.80 r
+  data arrival time                                                  0.80
+
+  clock clk (rise edge)                                   1.00       1.00
+  clock network delay (ideal)                             0.00       1.00
+  sqrt_f_reg_reg[1]/CP (DFCNQD1BWP30P140)                 0.00       1.00 r
+  library setup time                                     -0.01       0.99
+  data required time                                                 0.99
+  --------------------------------------------------------------------------
+  data required time                                                 0.99
+  data arrival time                                                 -0.80
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.19
+
+
+
+

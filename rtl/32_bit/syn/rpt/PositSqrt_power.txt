@@ -1,0 +1,97 @@
+Loading db file '/scratch/synLibs/tcbn28hpcplusbwp30p140_180a_FE/TSMCHOME/digital/Front_End/timing_power_noise/NLDM/tcbn28hpcplusbwp30p140_180a/tcbn28hpcplusbwp30p140tt1v25c.db'
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: The derived toggle rate value (2.000000) for the clock net 'clk' conflicts with the annotated value (0.100000). Using the annotated value. (PWR-12)
+Warning: The net 'sqrt_module/DP/clk' is annotated with a toggle rate but no static probability. A default static probability value of 0.500000 is used. (PWR-419)
+Warning: The net 'sqrt_module/DP/rst' is annotated with a toggle rate but no static probability. A default static probability value of 0.500000 is used. (PWR-419)
+Warning: The net 'start' is annotated with a toggle rate but no static probability. A default static probability value of 0.500000 is used. (PWR-419)
+Warning: The net 'X_sgn' is annotated with a toggle rate but no static probability. A default static probability value of 0.500000 is used. (PWR-419)
+Warning: The net 'X_decoder/RegimeCounter/OZb' is annotated with a toggle rate but no static probability. A default static probability value of 0.500000 is used. (PWR-419)
+Warning: The net 'X_decoder/RegimeCounter/X[29]' is annotated with a toggle rate but no static probability. A default static probability value of 0.500000 is used. (PWR-419)
+Warning: The net 'X_decoder/RegimeCounter/X[28]' is annotated with a toggle rate but no static probability. A default static probability value of 0.500000 is used. (PWR-419)
+Warning: The net 'X_decoder/RegimeCounter/X[27]' is annotated with a toggle rate but no static probability. A default static probability value of 0.500000 is used. (PWR-419)
+Warning: The net 'X_decoder/RegimeCounter/X[26]' is annotated with a toggle rate but no static probability. A default static probability value of 0.500000 is used. (PWR-419)
+Warning: The net 'X_decoder/RegimeCounter/X[25]' is annotated with a toggle rate but no static probability. A default static probability value of 0.500000 is used. (PWR-419)
+Warning: The net 'X_decoder/RegimeCounter/X[24]' is annotated with a toggle rate but no static probability. A default static probability value of 0.500000 is used. (PWR-419)
+Warning: The net 'X_decoder/RegimeCounter/X[23]' is annotated with a toggle rate but no static probability. A default static probability value of 0.500000 is used. (PWR-419)
+Warning: The net 'X_decoder/RegimeCounter/X[22]' is annotated with a toggle rate but no static probability. A default static probability value of 0.500000 is used. (PWR-419)
+Warning: The net 'X_decoder/RegimeCounter/X[21]' is annotated with a toggle rate but no static probability. A default static probability value of 0.500000 is used. (PWR-419)
+Warning: The net 'X_decoder/RegimeCounter/X[20]' is annotated with a toggle rate but no static probability. A default static probability value of 0.500000 is used. (PWR-419)
+Warning: The net 'X_decoder/RegimeCounter/X[19]' is annotated with a toggle rate but no static probability. A default static probability value of 0.500000 is used. (PWR-419)
+Warning: The net 'X_decoder/RegimeCounter/X[18]' is annotated with a toggle rate but no static probability. A default static probability value of 0.500000 is used. (PWR-419)
+Warning: The net 'X_decoder/RegimeCounter/X[17]' is annotated with a toggle rate but no static probability. A default static probability value of 0.500000 is used. (PWR-419)
+Warning: The net 'X_decoder/RegimeCounter/X[16]' is annotated with a toggle rate but no static probability. A default static probability value of 0.500000 is used. (PWR-419)
+Warning: The net 'X_decoder/RegimeCounter/X[15]' is annotated with a toggle rate but no static probability. A default static probability value of 0.500000 is used. (PWR-419)
+Warning: The net 'X_decoder/RegimeCounter/X[14]' is annotated with a toggle rate but no static probability. A default static probability value of 0.500000 is used. (PWR-419)
+Warning: The net 'X_decoder/RegimeCounter/X[13]' is annotated with a toggle rate but no static probability. A default static probability value of 0.500000 is used. (PWR-419)
+Warning: The net 'X_decoder/RegimeCounter/X[12]' is annotated with a toggle rate but no static probability. A default static probability value of 0.500000 is used. (PWR-419)
+Warning: The net 'X_decoder/RegimeCounter/X[11]' is annotated with a toggle rate but no static probability. A default static probability value of 0.500000 is used. (PWR-419)
+Warning: The net 'X_decoder/RegimeCounter/X[10]' is annotated with a toggle rate but no static probability. A default static probability value of 0.500000 is used. (PWR-419)
+Warning: The net 'X_decoder/RegimeCounter/X[9]' is annotated with a toggle rate but no static probability. A default static probability value of 0.500000 is used. (PWR-419)
+Warning: The net 'X_decoder/RegimeCounter/X[8]' is annotated with a toggle rate but no static probability. A default static probability value of 0.500000 is used. (PWR-419)
+Warning: The net 'X_decoder/RegimeCounter/X[7]' is annotated with a toggle rate but no static probability. A default static probability value of 0.500000 is used. (PWR-419)
+Warning: The net 'X_decoder/RegimeCounter/X[6]' is annotated with a toggle rate but no static probability. A default static probability value of 0.500000 is used. (PWR-419)
+Warning: The net 'X_decoder/RegimeCounter/X[5]' is annotated with a toggle rate but no static probability. A default static probability value of 0.500000 is used. (PWR-419)
+Warning: The net 'X_decoder/RegimeCounter/X[4]' is annotated with a toggle rate but no static probability. A default static probability value of 0.500000 is used. (PWR-419)
+Warning: The net 'X_decoder/RegimeCounter/X[3]' is annotated with a toggle rate but no static probability. A default static probability value of 0.500000 is used. (PWR-419)
+Warning: The net 'X_decoder/RegimeCounter/X[2]' is annotated with a toggle rate but no static probability. A default static probability value of 0.500000 is used. (PWR-419)
+Warning: The net 'X_decoder/RegimeCounter/X[1]' is annotated with a toggle rate but no static probability. A default static probability value of 0.500000 is used. (PWR-419)
+Warning: The net 'X_decoder/RegimeCounter/X[0]' is annotated with a toggle rate but no static probability. A default static probability value of 0.500000 is used. (PWR-419)
+Warning: Design has unannotated sequential cell outputs. (PWR-415)
+ 
+****************************************
+Report : power
+        -analysis_effort low
+Design : PositSqrt
+Version: U-2022.12-SP7
+Date   : Mon Feb  5 19:18:34 2024
+****************************************
+
+
+Library(s) Used:
+
+    tcbn28hpcplusbwp30p140tt1v25c (File: /scratch/synLibs/tcbn28hpcplusbwp30p140_180a_FE/TSMCHOME/digital/Front_End/timing_power_noise/NLDM/tcbn28hpcplusbwp30p140_180a/tcbn28hpcplusbwp30p140tt1v25c.db)
+
+
+Operating Conditions: tt1v25c   Library: tcbn28hpcplusbwp30p140tt1v25c
+Wire Load Model Mode: top
+
+Design        Wire Load Model            Library
+------------------------------------------------
+PositSqrt              ZeroWireload      tcbn28hpcplusbwp30p140tt1v25c
+
+
+Global Operating Voltage = 1    
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1nW
+
+
+Attributes
+----------
+i - Including register clock pin internal power
+
+
+  Cell Internal Power  =  99.3321 uW   (70%)
+  Net Switching Power  =  43.4928 uW   (30%)
+                         ---------
+Total Dynamic Power    = 142.8250 uW  (100%)
+
+Cell Leakage Power     =   7.2485 uW
+
+
+                 Internal         Switching           Leakage            Total
+Power Group      Power            Power               Power              Power   (   %    )  Attrs
+--------------------------------------------------------------------------------------------------
+io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
+clock_network  4.3460e-02            0.0000            0.0000        4.3460e-02  (  28.96%)  i
+register       1.5287e-02        8.8154e-04        2.3864e+03        1.8555e-02  (  12.36%)
+sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
+combinational  4.0585e-02        4.2611e-02        4.8618e+03        8.8058e-02  (  58.68%)
+--------------------------------------------------------------------------------------------------
+Total          9.9332e-02 mW     4.3493e-02 mW     7.2482e+03 nW         0.1501 mW
+1
