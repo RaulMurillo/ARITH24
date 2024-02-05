@@ -50,7 +50,7 @@ ENTI/
 # Questasim artifacts
 work/
 *.wlf
-input.txt
+input*.txt
 output*.txt
 transcript
 

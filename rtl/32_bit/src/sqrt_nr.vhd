@@ -243,8 +243,8 @@ begin
 -------------------------------------------------------------------------------
 
 stat_n <= '1' when (int_n = C_ZERO) else '0';
--- stat_z <= z_next;
-stat_z <= '0';
+ stat_z <= z_next;
+--stat_z <= '0';
 
 -- stat_nonzero <= '1' when int_b(0) = '1' else '0';
 

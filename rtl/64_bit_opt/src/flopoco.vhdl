@@ -392,6 +392,7 @@ signal sqrt_in :  std_logic_vector(61 downto 0);
 signal sqrt_in_reg: std_logic_vector(61 downto 0);
 signal sqrt_ready :  std_logic;
 --- Need registers for the signals in the rounding logic
+signal X_sf_reg :  std_logic_vector(8 downto 0);
 signal XY_sf_reg :  std_logic_vector(9 downto 0);
 signal XY_nzn_reg :  std_logic;
 signal XY_finalSgn_reg :  std_logic;
@@ -400,8 +401,8 @@ signal ready: std_logic;
 signal ready_reg: std_logic;
 --- Signals for optimized module
 signal reg_Len: std_logic_vector(5 downto 0);
-signal iters_aux: std_logic_vector(5 downto 0);
 signal iters: std_logic_vector(5 downto 0);
+signal iters_reg: std_logic_vector(5 downto 0);
 
 begin
 
@@ -412,6 +413,7 @@ begin
 REG_DATA_TOP : process (clk,rst) is
    begin
    if (rst = '1') then
+      X_sf_reg <= (others => '0');
       XY_sf_reg <= (others => '0');
       XY_nzn_reg <= '1';
       XY_finalSgn_reg <= '0';
@@ -419,7 +421,9 @@ REG_DATA_TOP : process (clk,rst) is
       start_reg <= '0';
       sqrt_f_reg <= (others => '0');
       ready_reg <= '0';
+      iters_reg <= (others => '0');
    elsif rising_edge(clk) then
+      X_sf_reg <= X_sf;
       XY_sf_reg <= XY_sf;
       XY_nzn_reg <= XY_nzn;
       XY_finalSgn_reg <= XY_finalSgn;
@@ -427,6 +431,7 @@ REG_DATA_TOP : process (clk,rst) is
       start_reg <= start;
       sqrt_f_reg <= sqrt_f;
       ready_reg <= ready;
+      iters_reg <= iters;
    end if;
 end process REG_DATA_TOP;
 
@@ -445,7 +450,7 @@ end process REG_DATA_TOP;
 ----------------------------- Exponent computation -----------------------------
    odd_exp <= X_sf(0);
    -- Divide exponent by 2
-   X_sf_3 <= X_sf(X_sf'high) & X_sf(X_sf'high) & X_sf(8 downto 1);
+   X_sf_3 <= X_sf_reg(X_sf_reg'high) & X_sf_reg(X_sf_reg'high) & X_sf_reg(8 downto 1);
 ----------------------------- Sqrt of the fraction -----------------------------
 
 sqrt_in <= ("01" & X_f & '0') when odd_exp='1' else ("001" & X_f);
@@ -461,7 +466,7 @@ port map (
          rst => rst,
          start => start_reg, --
          X => sqrt_in_reg, --
-         iters => iters,
+         iters => iters_reg,
          ready => sqrt_ready,
          R => sqrt_f);
 -- ready <= sqrt_ready; -- OR NOT(XY_nzn_reg); -- Fast forward special values. TODO: FIX

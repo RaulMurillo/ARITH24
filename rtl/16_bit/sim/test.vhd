@@ -47,6 +47,9 @@ end entity;
 
 architecture behavorial of TestBench_PositSqrt is
 constant DataWidth : integer := 16;
+constant INPUT_FILE_NAME : string := "./input.txt"; -- Specify the input file name
+constant OUTPUT_FILE_NAME : string := "./output.txt"; -- Specify the input file name
+
     component PositSqrt is
         port ( 
                 clk, rst : in std_logic;
@@ -164,11 +167,11 @@ begin
         variable possibilityNumber : integer := 0;
         variable localErrorCounter : integer := 0;
         variable tmpChar : character;
-        file inputsFile : text is "./input.txt"; 
+        file inputsFile : text is INPUT_FILE_NAME;
         variable V_X : bit_vector(DataWidth-1 downto 0);
         variable V_R : bit_vector(DataWidth-1 downto 0);
         variable outline : line; 
-        file outputsFile : text open write_mode is "output.txt";
+        file outputsFile : text open write_mode is OUTPUT_FILE_NAME;
     begin
         while not endfile(inputsFile) loop
             -- Reset the circuit.
