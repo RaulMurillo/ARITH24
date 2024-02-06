@@ -1,0 +1,221 @@
+report_timing 
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : PositSqrt
+Version: U-2022.12-SP7
+Date   : Tue Feb  6 18:27:26 2024
+****************************************
+
+Operating Conditions: tt1v25c   Library: tcbn28hpcplusbwp30p140tt1v25c
+Wire Load Model Mode: top
+
+  Startpoint: s_16_d1_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: q_23_d1_reg[7]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  PositSqrt          ZeroWireload          tcbn28hpcplusbwp30p140tt1v25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  s_16_d1_reg/CP (DFQD4BWP30P140)                         0.00       0.00 r
+  s_16_d1_reg/Q (DFQD4BWP30P140)                          0.03       0.03 f
+  U3314/ZN (INVD8BWP30P140)                               0.01       0.04 r
+  U3449/Z (XOR2OPTND4BWP30P140)                           0.01       0.05 r
+  sub_17/Y[15] (IntAdder_31_F50_uid40)                    0.00       0.05 r
+  sub_17/add_1_root_add_858_2/B[15] (IntAdder_31_F50_uid40_DW01_add_J5_0)
+                                                          0.00       0.05 r
+  sub_17/add_1_root_add_858_2/U16/Z (OR2D4BWP30P140)      0.01       0.07 r
+  sub_17/add_1_root_add_858_2/U143/ZN (INVD1BWP30P140)
+                                                          0.01       0.08 f
+  sub_17/add_1_root_add_858_2/U8/Z (OR3D1BWP30P140)       0.02       0.09 f
+  sub_17/add_1_root_add_858_2/U37/ZN (INVD0BWP30P140)     0.01       0.10 r
+  sub_17/add_1_root_add_858_2/U29/ZN (AOI31D1BWP30P140)
+                                                          0.01       0.11 f
+  sub_17/add_1_root_add_858_2/U97/ZN (ND2D1BWP30P140)     0.01       0.12 r
+  sub_17/add_1_root_add_858_2/U99/ZN (INVD1BWP30P140)     0.00       0.12 f
+  sub_17/add_1_root_add_858_2/U98/ZN (ND2D1BWP30P140)     0.01       0.13 r
+  sub_17/add_1_root_add_858_2/U38/ZN (INVD1BWP30P140)     0.01       0.14 f
+  sub_17/add_1_root_add_858_2/U138/ZN (OAI21D1BWP30P140)
+                                                          0.01       0.15 r
+  sub_17/add_1_root_add_858_2/U13/ZN (INVD2BWP30P140)     0.01       0.16 f
+  sub_17/add_1_root_add_858_2/U12/ZN (OAI21D2BWP30P140)
+                                                          0.01       0.17 r
+  sub_17/add_1_root_add_858_2/U15/ZN (INVD2BWP30P140)     0.01       0.17 f
+  sub_17/add_1_root_add_858_2/U14/ZN (OAI21D2BWP30P140)
+                                                          0.01       0.18 r
+  sub_17/add_1_root_add_858_2/U193/ZN (ND3D1BWP30P140)
+                                                          0.01       0.19 f
+  sub_17/add_1_root_add_858_2/U20/ZN (CKND2D1BWP30P140)
+                                                          0.01       0.21 r
+  sub_17/add_1_root_add_858_2/U236/ZN (INVD1BWP30P140)
+                                                          0.01       0.21 f
+  sub_17/add_1_root_add_858_2/U101/ZN (OAI21D2BWP30P140)
+                                                          0.01       0.22 r
+  sub_17/add_1_root_add_858_2/U25/ZN (XNR2OPTND4BWP30P140)
+                                                          0.01       0.24 r
+  sub_17/add_1_root_add_858_2/SUM[30] (IntAdder_31_F50_uid40_DW01_add_J5_0)
+                                                          0.00       0.24 r
+  sub_17/R[30] (IntAdder_31_F50_uid40)                    0.00       0.24 r
+  U3398/ZN (INVD12BWP30P140)                              0.01       0.24 f
+  U3829/Z (XOR2UD1BWP30P140)                              0.01       0.26 f
+  sub_18/Y[29] (IntAdder_31_F50_uid42)                    0.00       0.26 f
+  sub_18/add_1_root_add_903_2/B[29] (IntAdder_31_F50_uid42_DW01_add_J6_0)
+                                                          0.00       0.26 f
+  sub_18/add_1_root_add_903_2/U223/ZN (INVD1BWP30P140)
+                                                          0.01       0.27 r
+  sub_18/add_1_root_add_903_2/U183/ZN (ND2D1BWP30P140)
+                                                          0.01       0.28 f
+  sub_18/add_1_root_add_903_2/U295/ZN (INVD1BWP30P140)
+                                                          0.01       0.28 r
+  sub_18/add_1_root_add_903_2/U36/ZN (NR2OPTIBD1BWP30P140)
+                                                          0.01       0.29 f
+  sub_18/add_1_root_add_903_2/U37/ZN (ND2OPTIBD1BWP30P140)
+                                                          0.01       0.30 r
+  sub_18/add_1_root_add_903_2/U39/ZN (INVD0BWP30P140)     0.01       0.31 f
+  sub_18/add_1_root_add_903_2/U43/ZN (ND2D1BWP30P140)     0.01       0.31 r
+  sub_18/add_1_root_add_903_2/U180/ZN (OAI22D1BWP30P140)
+                                                          0.01       0.33 f
+  sub_18/add_1_root_add_903_2/U178/ZN (NR2D1BWP30P140)
+                                                          0.01       0.34 r
+  sub_18/add_1_root_add_903_2/U17/Z (OA21D4BWP30P140)     0.02       0.36 r
+  sub_18/add_1_root_add_903_2/U3/ZN (XNR2OPTND8BWP30P140)
+                                                          0.01       0.37 f
+  sub_18/add_1_root_add_903_2/SUM[30] (IntAdder_31_F50_uid42_DW01_add_J6_0)
+                                                          0.00       0.37 f
+  sub_18/R[30] (IntAdder_31_F50_uid42)                    0.00       0.37 f
+  U3240/ZN (INVD16BWP30P140)                              0.01       0.38 r
+  U3438/ZN (INVD0BWP30P140)                               0.01       0.38 f
+  U3436/ZN (CKND2D2BWP30P140)                             0.01       0.39 r
+  U3437/ZN (ND2D2BWP30P140)                               0.01       0.40 f
+  sub_19/Y[28] (IntAdder_31_F50_uid44)                    0.00       0.40 f
+  sub_19/add_1_root_add_948_2/B[28] (IntAdder_31_F50_uid44_DW01_add_1)
+                                                          0.00       0.40 f
+  sub_19/add_1_root_add_948_2/U5/ZN (INVD1BWP30P140)      0.01       0.41 r
+  sub_19/add_1_root_add_948_2/U41/ZN (OAI21D0P7BWP30P140)
+                                                          0.01       0.42 f
+  sub_19/add_1_root_add_948_2/U22/ZN (OAI21D0P7BWP30P140)
+                                                          0.01       0.43 r
+  sub_19/add_1_root_add_948_2/U113/ZN (CKND2D1BWP30P140)
+                                                          0.01       0.44 f
+  sub_19/add_1_root_add_948_2/U152/ZN (OAI21D1BWP30P140)
+                                                          0.01       0.45 r
+  sub_19/add_1_root_add_948_2/U6/ZN (OAI21D1BWP30P140)
+                                                          0.01       0.46 f
+  sub_19/add_1_root_add_948_2/U21/ZN (AOI211D2BWP30P140)
+                                                          0.02       0.48 r
+  sub_19/add_1_root_add_948_2/U20/ZN (XNR2OPTND4BWP30P140)
+                                                          0.02       0.50 r
+  sub_19/add_1_root_add_948_2/SUM[30] (IntAdder_31_F50_uid44_DW01_add_1)
+                                                          0.00       0.50 r
+  sub_19/R[30] (IntAdder_31_F50_uid44)                    0.00       0.50 r
+  U3320/ZN (INVD12BWP30P140)                              0.01       0.51 f
+  U3287/Z (XOR2UD0BWP30P140)                              0.01       0.52 f
+  sub_20/Y[26] (IntAdder_31_F50_uid46)                    0.00       0.52 f
+  sub_20/add_1_root_add_993_2/B[26] (IntAdder_31_F50_uid46_DW01_add_J7_0)
+                                                          0.00       0.52 f
+  sub_20/add_1_root_add_993_2/U220/Z (OR2D1BWP30P140)     0.02       0.54 f
+  sub_20/add_1_root_add_993_2/U7/ZN (INVD1BWP30P140)      0.01       0.55 r
+  sub_20/add_1_root_add_993_2/U170/Z (OR3D1BWP30P140)     0.02       0.57 r
+  sub_20/add_1_root_add_993_2/U61/ZN (INVD0BWP30P140)     0.01       0.58 f
+  sub_20/add_1_root_add_993_2/U228/ZN (ND3D1BWP30P140)
+                                                          0.01       0.59 r
+  sub_20/add_1_root_add_993_2/U226/ZN (OAI211D1BWP30P140)
+                                                          0.02       0.61 f
+  sub_20/add_1_root_add_993_2/U20/ZN (NR2OPTIBD2BWP30P140)
+                                                          0.01       0.62 r
+  sub_20/add_1_root_add_993_2/U19/ZN (XNR2OPTND4BWP30P140)
+                                                          0.02       0.63 r
+  sub_20/add_1_root_add_993_2/SUM[30] (IntAdder_31_F50_uid46_DW01_add_J7_0)
+                                                          0.00       0.63 r
+  sub_20/R[30] (IntAdder_31_F50_uid46)                    0.00       0.63 r
+  U3243/ZN (DCCKND8BWP30P140)                             0.01       0.64 f
+  U3827/Z (XOR2UD1BWP30P140)                              0.02       0.66 f
+  sub_21/Y[24] (IntAdder_31_F50_uid48)                    0.00       0.66 f
+  sub_21/add_1_root_add_1038_2/B[24] (IntAdder_31_F50_uid48_DW01_add_J5_0)
+                                                          0.00       0.66 f
+  sub_21/add_1_root_add_1038_2/U204/ZN (INVD1BWP30P140)
+                                                          0.01       0.67 r
+  sub_21/add_1_root_add_1038_2/U80/ZN (CKND2D1BWP30P140)
+                                                          0.01       0.68 f
+  sub_21/add_1_root_add_1038_2/U176/ZN (IND2D1BWP30P140)
+                                                          0.01       0.69 f
+  sub_21/add_1_root_add_1038_2/U174/ZN (ND3D1BWP30P140)
+                                                          0.01       0.70 r
+  sub_21/add_1_root_add_1038_2/U31/ZN (ND2D1BWP30P140)
+                                                          0.01       0.71 f
+  sub_21/add_1_root_add_1038_2/U52/ZN (IND3D1BWP30P140)
+                                                          0.01       0.72 r
+  sub_21/add_1_root_add_1038_2/U165/ZN (OAI21D1BWP30P140)
+                                                          0.01       0.73 f
+  sub_21/add_1_root_add_1038_2/U81/ZN (NR2OPTIBD1BWP30P140)
+                                                          0.01       0.74 r
+  sub_21/add_1_root_add_1038_2/U22/Z (OA21D4BWP30P140)
+                                                          0.02       0.76 r
+  sub_21/add_1_root_add_1038_2/U21/Z (XOR2OPTND6BWP30P140)
+                                                          0.01       0.77 r
+  sub_21/add_1_root_add_1038_2/SUM[30] (IntAdder_31_F50_uid48_DW01_add_J5_0)
+                                                          0.00       0.77 r
+  sub_21/R[30] (IntAdder_31_F50_uid48)                    0.00       0.77 r
+  U3388/ZN (INVD12BWP30P140)                              0.01       0.78 f
+  U3446/ZN (ND2D2BWP30P140)                               0.01       0.79 r
+  U3311/ZN (CKND2D2BWP30P140)                             0.01       0.79 f
+  sub_22/Y[14] (IntAdder_31_F50_uid50)                    0.00       0.79 f
+  sub_22/add_1_root_add_1083_2/B[14] (IntAdder_31_F50_uid50_DW01_add_J7_0)
+                                                          0.00       0.79 f
+  sub_22/add_1_root_add_1083_2/U36/Z (OR2D1BWP30P140)     0.01       0.81 f
+  sub_22/add_1_root_add_1083_2/U332/ZN (INVD1BWP30P140)
+                                                          0.01       0.82 r
+  sub_22/add_1_root_add_1083_2/U45/ZN (NR2D1BWP30P140)
+                                                          0.01       0.82 f
+  sub_22/add_1_root_add_1083_2/U20/ZN (CKND2D1BWP30P140)
+                                                          0.01       0.83 r
+  sub_22/add_1_root_add_1083_2/U187/ZN (IND4D1BWP30P140)
+                                                          0.01       0.85 r
+  sub_22/add_1_root_add_1083_2/U199/ZN (INR4D0BWP30P140)
+                                                          0.03       0.87 r
+  sub_22/add_1_root_add_1083_2/U49/ZN (NR2D0P7BWP30P140)
+                                                          0.01       0.88 f
+  sub_22/add_1_root_add_1083_2/U50/ZN (NR2OPTIBD1BWP30P140)
+                                                          0.01       0.89 r
+  sub_22/add_1_root_add_1083_2/U107/ZN (OAI21D0P7BWP30P140)
+                                                          0.01       0.91 f
+  sub_22/add_1_root_add_1083_2/U197/ZN (XNR2UD1BWP30P140)
+                                                          0.01       0.92 f
+  sub_22/add_1_root_add_1083_2/SUM[25] (IntAdder_31_F50_uid50_DW01_add_J7_0)
+                                                          0.00       0.92 f
+  sub_22/R[25] (IntAdder_31_F50_uid50)                    0.00       0.92 f
+  U3316/ZN (INVD1BWP30P140)                               0.01       0.93 r
+  U4450/ZN (ND4D1BWP30P140)                               0.02       0.95 f
+  U3332/ZN (NR4D1BWP30P140)                               0.01       0.96 r
+  U3359/ZN (IND4D1BWP30P140)                              0.02       0.98 f
+  U3356/ZN (ND2OPTPAD1BWP30P140)                          0.01       0.99 r
+  U4573/ZN (INVD1BWP30P140)                               0.01       0.99 f
+  U3450/Z (AN2D2BWP30P140)                                0.01       1.00 f
+  q_23_d1_reg[7]/D (DFQD2BWP30P140)                       0.00       1.00 f
+  data arrival time                                                  1.00
+
+  clock clk (rise edge)                                   1.00       1.00
+  clock network delay (ideal)                             0.00       1.00
+  q_23_d1_reg[7]/CP (DFQD2BWP30P140)                      0.00       1.00 r
+  library setup time                                      0.00       1.00
+  data required time                                                 1.00
+  --------------------------------------------------------------------------
+  data required time                                                 1.00
+  data arrival time                                                 -1.00
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+
+

@@ -1,0 +1,136 @@
+ 
+****************************************
+Report : power
+        -hier
+        -analysis_effort low
+Design : PositSqrt
+Version: U-2022.12-SP7
+Date   : Tue Feb  6 18:27:31 2024
+****************************************
+
+
+Library(s) Used:
+
+    tcbn28hpcplusbwp30p140tt1v25c (File: /scratch/synLibs/tcbn28hpcplusbwp30p140_180a_FE/TSMCHOME/digital/Front_End/timing_power_noise/NLDM/tcbn28hpcplusbwp30p140_180a/tcbn28hpcplusbwp30p140tt1v25c.db)
+
+
+Operating Conditions: tt1v25c   Library: tcbn28hpcplusbwp30p140tt1v25c
+Wire Load Model Mode: top
+
+Design        Wire Load Model            Library
+------------------------------------------------
+PositSqrt              ZeroWireload      tcbn28hpcplusbwp30p140tt1v25c
+
+
+Global Operating Voltage = 1    
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1nW
+
+
+--------------------------------------------------------------------------------
+                                       Switch   Int      Leak     Total
+Hierarchy                              Power    Power    Power    Power    %
+--------------------------------------------------------------------------------
+PositSqrt                                 0.141    0.354 4.59e+04    0.541 100.0
+  PositEncoder (PositFastEncoder_32_2_F50_uid68)
+                                       3.39e-03 2.38e-02 2.26e+03 2.95e-02   5.5
+    add_1679 (PositFastEncoder_32_2_F50_uid68_DW01_add_0_DW01_add_57)
+                                       1.80e-04 1.07e-03  415.730 1.67e-03   0.3
+    RegimeGenerator (RightShifterSticky31_by_max_31_F50_uid70)
+                                       2.50e-03 1.02e-02 1.03e+03 1.37e-02   2.5
+  sub_29 (IntAdder_31_F50_uid64)       1.90e-03 2.23e-02 1.46e+03 2.56e-02   4.7
+    add_1_root_add_1423_2 (IntAdder_31_F50_uid64_DW01_add_0_DW01_add_59)
+                                       6.01e-04 2.47e-03  323.693 3.40e-03   0.6
+  sub_28 (IntAdder_31_F50_uid62)       2.76e-03 5.11e-03 1.21e+03 9.09e-03   1.7
+    add_1_root_add_1368_2 (IntAdder_31_F50_uid62_DW01_add_J4_0)
+                                       2.76e-03 4.30e-03 1.14e+03 8.20e-03   1.5
+  sub_27 (IntAdder_31_F50_uid60)       2.93e-03 5.14e-03 1.29e+03 9.35e-03   1.7
+    add_1_root_add_1322_2 (IntAdder_31_F50_uid60_DW01_add_J2_0)
+                                       2.93e-03 4.33e-03 1.21e+03 8.47e-03   1.6
+  sub_26 (IntAdder_31_F50_uid58)       2.69e-03 4.79e-03 1.24e+03 8.72e-03   1.6
+    add_1_root_add_1276_2 (IntAdder_31_F50_uid58_DW01_add_J4_0)
+                                       2.69e-03 3.98e-03 1.16e+03 7.84e-03   1.4
+  sub_25 (IntAdder_31_F50_uid56)       2.64e-03 4.68e-03 1.22e+03 8.55e-03   1.6
+    add_1_root_add_1230_2 (IntAdder_31_F50_uid56_DW01_add_1)
+                                       2.64e-03 3.87e-03 1.15e+03 7.66e-03   1.4
+  sub_24 (IntAdder_31_F50_uid54)       2.58e-03 4.37e-03 1.18e+03 8.14e-03   1.5
+    add_1_root_add_1184_2 (IntAdder_31_F50_uid54_DW01_add_J3_0)
+                                       2.58e-03 3.56e-03 1.11e+03 7.25e-03   1.3
+  sub_23 (IntAdder_31_F50_uid52)       2.78e-03 2.12e-02 2.19e+03 2.62e-02   4.8
+    add_1_root_add_1137_2 (IntAdder_31_F50_uid52_DW01_add_J2_0)
+                                       2.23e-03 3.22e-03 1.08e+03 6.52e-03   1.2
+  sub_22 (IntAdder_31_F50_uid50)       2.32e-03 3.97e-03 1.25e+03 7.54e-03   1.4
+    add_1_root_add_1083_2 (IntAdder_31_F50_uid50_DW01_add_J7_0)
+                                       2.32e-03 3.35e-03 1.19e+03 6.87e-03   1.3
+  sub_21 (IntAdder_31_F50_uid48)       2.47e-03 4.22e-03 1.32e+03 8.00e-03   1.5
+    add_1_root_add_1038_2 (IntAdder_31_F50_uid48_DW01_add_J5_0)
+                                       2.47e-03 3.60e-03 1.26e+03 7.33e-03   1.4
+  sub_20 (IntAdder_31_F50_uid46)       2.55e-03 4.03e-03 1.33e+03 7.91e-03   1.5
+    add_1_root_add_993_2 (IntAdder_31_F50_uid46_DW01_add_J7_0)
+                                       2.55e-03 3.41e-03 1.27e+03 7.23e-03   1.3
+  sub_19 (IntAdder_31_F50_uid44)       2.05e-03 3.39e-03 1.17e+03 6.61e-03   1.2
+    add_1_root_add_948_2 (IntAdder_31_F50_uid44_DW01_add_1)
+                                       2.05e-03 2.77e-03 1.11e+03 5.94e-03   1.1
+  sub_18 (IntAdder_31_F50_uid42)       2.31e-03 3.75e-03 1.28e+03 7.34e-03   1.4
+    add_1_root_add_903_2 (IntAdder_31_F50_uid42_DW01_add_J6_0)
+                                       2.31e-03 3.14e-03 1.22e+03 6.67e-03   1.2
+  sub_17 (IntAdder_31_F50_uid40)       1.71e-03 1.05e-02 1.58e+03 1.38e-02   2.5
+    add_1_root_add_858_2 (IntAdder_31_F50_uid40_DW01_add_J5_0)
+                                       1.54e-03 2.08e-03 1.04e+03 4.66e-03   0.9
+  sub_16 (IntAdder_31_F50_uid38)       1.64e-03 2.93e-03 1.17e+03 5.74e-03   1.1
+    add_1_root_add_811_2 (IntAdder_31_F50_uid38_DW01_add_J10_0)
+                                       1.64e-03 2.51e-03 1.13e+03 5.28e-03   1.0
+  sub_15 (IntAdder_31_F50_uid36)       1.71e-03 2.82e-03 1.17e+03 5.70e-03   1.1
+    add_1_root_add_767_2 (IntAdder_31_F50_uid36_DW01_add_J8_0)
+                                       1.71e-03 2.40e-03 1.13e+03 5.24e-03   1.0
+  sub_14 (IntAdder_31_F50_uid34)       1.71e-03 2.82e-03 1.13e+03 5.67e-03   1.0
+    add_1_root_add_723_2 (IntAdder_31_F50_uid34_DW01_add_J10_0)
+                                       1.71e-03 2.40e-03 1.09e+03 5.20e-03   1.0
+  sub_13 (IntAdder_31_F50_uid32)       1.73e-03 3.06e-03 1.16e+03 5.95e-03   1.1
+    add_1_root_add_679_2 (IntAdder_31_F50_uid32_DW01_add_1)
+                                       1.73e-03 2.64e-03 1.12e+03 5.49e-03   1.0
+  sub_12 (IntAdder_31_F50_uid30)       1.68e-03 2.95e-03 1.14e+03 5.77e-03   1.1
+    add_1_root_add_635_2 (IntAdder_31_F50_uid30_DW01_add_J9_0)
+                                       1.68e-03 2.53e-03 1.10e+03 5.30e-03   1.0
+  sub_11 (IntAdder_31_F50_uid28)       1.66e-03 1.11e-02 1.56e+03 1.43e-02   2.6
+    add_1_root_add_591_2 (IntAdder_31_F50_uid28_DW01_add_J8_0)
+                                       1.44e-03 2.24e-03 1.03e+03 4.71e-03   0.9
+  sub_10 (IntAdder_31_F50_uid26)       1.38e-03 2.52e-03 1.03e+03 4.93e-03   0.9
+    add_1_root_add_545_2 (IntAdder_31_F50_uid26_DW01_add_J12_0)
+                                       1.38e-03 2.29e-03 1.00e+03 4.67e-03   0.9
+  sub_9 (IntAdder_31_F50_uid24)        1.62e-03 2.72e-03 1.06e+03 5.39e-03   1.0
+    add_1_root_add_502_2 (IntAdder_31_F50_uid24_DW01_add_J11_0)
+                                       1.61e-03 2.49e-03 1.04e+03 5.14e-03   1.0
+  sub_8 (IntAdder_31_F50_uid22)        1.55e-03 2.65e-03 1.01e+03 5.22e-03   1.0
+    add_1_root_add_459_2 (IntAdder_31_F50_uid22_DW01_add_J13_0)
+                                       1.55e-03 2.43e-03  989.141 4.97e-03   0.9
+  sub_7 (IntAdder_31_F50_uid20)        1.46e-03 2.45e-03  969.667 4.88e-03   0.9
+    add_1_root_add_416_2 (IntAdder_31_F50_uid20_DW01_add_1)
+                                       1.46e-03 2.22e-03  945.731 4.63e-03   0.9
+  sub_6 (IntAdder_31_F50_uid18)        1.33e-03 2.39e-03  953.046 4.67e-03   0.9
+    add_1_root_add_373_2 (IntAdder_31_F50_uid18_DW01_add_J12_0)
+                                       1.33e-03 2.16e-03  929.110 4.42e-03   0.8
+  sub_5 (IntAdder_31_F50_uid16)        1.58e-03 1.64e-02 1.44e+03 1.94e-02   3.6
+    add_1_root_add_330_2 (IntAdder_31_F50_uid16_DW01_add_J11_0)
+                                       1.30e-03 2.14e-03  914.361 4.35e-03   0.8
+  sub_4 (IntAdder_31_F50_uid14)        4.67e-03 1.42e-02  292.078 1.92e-02   3.5
+    add_1_root_add_285_2 (IntAdder_31_F50_uid14_DW01_add_0_DW01_add_84)
+                                       4.67e-03 1.42e-02  292.078 1.92e-02   3.5
+  sub_3 (IntAdder_31_F50_uid12)        9.26e-03 1.34e-02  289.545 2.29e-02   4.2
+    add_1_root_add_249_2 (IntAdder_31_F50_uid12_DW01_add_0_DW01_add_85)
+                                       9.26e-03 1.34e-02  289.545 2.29e-02   4.2
+  sub_2 (IntAdder_31_F50_uid10)        9.07e-03 1.28e-02  284.942 2.22e-02   4.1
+    add_1_root_add_213_2 (IntAdder_31_F50_uid10_DW01_add_0_DW01_add_86)
+                                       9.07e-03 1.28e-02  284.942 2.22e-02   4.1
+  sub_1 (IntAdder_31_F50_uid8)         8.61e-03 1.17e-02  279.255 2.06e-02   3.8
+    add_1_root_add_177_2 (IntAdder_31_F50_uid8_DW01_add_0_DW01_add_87)
+                                       8.61e-03 1.17e-02  279.255 2.06e-02   3.8
+  X_decoder (PositFastDecoder_32_2_F50_uid4)
+                                       2.19e-02 2.53e-02  813.358 4.80e-02   8.9
+    RegimeCounter (Normalizer_ZO_30_30_30_F50_uid6)
+                                       1.75e-02 2.18e-02  717.192 4.00e-02   7.4
+1
