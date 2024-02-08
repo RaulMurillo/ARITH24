@@ -237,6 +237,7 @@ begin
    two_r + (two_q - pow_2_next);
    rem_z <= '1' when r_next = 0 else '0';
    z_next <= rem_z OR z_reg;
+   -- z_next <= '0';
    
 -------------------------------------------------------------------------------
 -- * comparaciones                                                           --
