@@ -26,7 +26,7 @@ set SOURCE_DIR ../src;       # rtl code that should be synthesised
 set SYN_DIR ./syn;          # synthesis directory, synthesis scripts constraints etc.
 
 # Design specific variables
-set TOP_NAME PositSqrt
+set TOP_NAME PositSqrt64
 
 # Read a HDL file, check for proper syntax and synthesizable logic, and store the design in an intermediate format.
 # Analyze the files in order: 1- Packages, 2- All HDL modules except top module, 3- Top level module.

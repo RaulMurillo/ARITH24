@@ -1,0 +1,32 @@
+report_area 
+ 
+****************************************
+Report : area
+Design : PositSqrt64
+Version: U-2022.12-SP7
+Date   : Tue Feb  6 18:38:45 2024
+****************************************
+
+Library(s) Used:
+
+    tcbn28hpcplusbwp30p140tt1v25c (File: /scratch/synLibs/tcbn28hpcplusbwp30p140_180a_FE/TSMCHOME/digital/Front_End/timing_power_noise/NLDM/tcbn28hpcplusbwp30p140_180a/tcbn28hpcplusbwp30p140tt1v25c.db)
+
+Number of ports:                        24167
+Number of nets:                         69324
+Number of cells:                        45295
+Number of combinational cells:          42320
+Number of sequential cells:              2847
+Number of macros/black boxes:               0
+Number of buf/inv:                       9394
+Number of references:                     155
+
+Combinational area:              21250.152139
+Buf/Inv area:                     2496.564033
+Noncombinational area:            5415.101951
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (Wire load has zero net area)
+
+Total cell area:                 26665.254089
+Total area:                 undefined
+
+
