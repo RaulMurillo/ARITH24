@@ -57,3 +57,6 @@ transcript
 
 # Python virtual environment
 venv/
+
+# Other stuff
+ieee_float*/
